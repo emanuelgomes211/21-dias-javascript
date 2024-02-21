@@ -51,6 +51,7 @@ cadastrarAlunos("Kaka", 8, 3, alunos)
 
 //função para ordenar por nome em ordem alfabética
 function ordenarPorNome(array) {
+<<<<<<< HEAD
     array.sort((a, b) => {
         const nomeA = a.Nome.toUpperCase();
         const nomeB = b.Nome.toUpperCase();
@@ -60,6 +61,17 @@ function ordenarPorNome(array) {
         }
 
         if (nomeA > nomeB) {
+=======
+    array.sort((a,b) =>{
+        const nomeA = a.Nome.toUpperCase();
+        const nomeB = b.Nome.toUpperCase();
+
+        if(nomeA < nomeB){
+            return -1;
+        }
+
+        if(nomeA > nomeB){
+>>>>>>> a5ebaebdb6e94873c146a5e8ba617df249e8522b
             return 1;
         }
 
@@ -67,25 +79,43 @@ function ordenarPorNome(array) {
 
     })
 
+<<<<<<< HEAD
     return array;
 }
 
 //função para calcular a media
 function calcularMedia(array) {
     if (array.length === 0) {
+=======
+    return array;   
+}
+
+//função para calcular a media
+function calcularMedia(array){
+    if(array.length === 0){
+>>>>>>> a5ebaebdb6e94873c146a5e8ba617df249e8522b
         return 0;
     }
 
     let somaNotas = 0;
 
+<<<<<<< HEAD
     array.forEach(aluno => {
         somaNotas += Number(aluno.Nota)
         return somaNotas;
+=======
+    array.forEach(element => {
+        somaNotas += Number(element.Nota);
+>>>>>>> a5ebaebdb6e94873c146a5e8ba617df249e8522b
     });
 
     const media = somaNotas / array.length;
     console.log(media)
+<<<<<<< HEAD
     return media
+=======
+    return media;
+>>>>>>> a5ebaebdb6e94873c146a5e8ba617df249e8522b
 }
 
 // ordenarPorNota(alunos)
